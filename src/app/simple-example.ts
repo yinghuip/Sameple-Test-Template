@@ -18,6 +18,10 @@ export class AngularAssessmentExample {
 
   }
 
+  getToken(){
+    //TODO: get token from mock api
+  }
+
   
   getUsers(){
   //TODO get user from mockApi and bind to users control
