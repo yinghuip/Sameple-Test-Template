@@ -45,7 +45,6 @@ export class MockApiService {
   }
   
   private _isAuthenicated(token:string){
-    console.log(token)
     return token === this.secretkey;
   }
 
