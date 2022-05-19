@@ -1,6 +1,5 @@
-import { HttpClient } from '@angular/common/http';
+
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
 import { MockApiService } from './mock-api.service';
 
 /**
