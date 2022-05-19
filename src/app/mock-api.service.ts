@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { throwError } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { of } from 'rxjs/internal/observable/of';
 
 @Injectable(
@@ -30,7 +30,7 @@ export class MockApiService {
  * @returns list of user object
  */
   getUsers(token:string) {
-    if(!this._isAuthenicated(token)) throwError(() => new Error('UnAuthorized'))
+    if(!this._isAuthenicated(token)) return throwError('UnAuthorized');
     return this.http.get("assets/users.json");
   }
 
@@ -40,11 +40,12 @@ export class MockApiService {
  * @returns list of depot object
  */
   getLocations(token:string) {
-    if(!this._isAuthenicated(token)) throwError(() => new Error('UnAuthorized'))
+    if(!this._isAuthenicated(token)) return throwError('UnAuthorized');
     return this.http.get("assets/locations.json");
   }
   
   private _isAuthenicated(token:string){
+    console.log(token)
     return token === this.secretkey;
   }
 

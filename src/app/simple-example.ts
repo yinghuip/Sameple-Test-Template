@@ -1,4 +1,3 @@
-
 import { Component } from '@angular/core';
 import { MockApiService } from './mock-api.service';
 
@@ -14,26 +13,24 @@ export class AngularAssessmentExample {
   users: User[] = [];
   Locations: Location[] = [];
   constructor(private mockApi: MockApiService) {
-
+    this.getUsers();
   }
 
-  getToken(){
+  getToken() {
     //TODO: get token from mock api
   }
 
-  
-  getUsers(){
-  //TODO get user from mockApi and bind to users control
+  getUsers() {
+    //TODO get user from mockApi and bind to users control
   }
 
-  getDepots(){
-  //TODO
-  /* 1.get depots from mockApi
-   * 2.distinct result
-   * 3.bind to depots control
-   * **/ 
+  getDepots() {
+    //TODO
+    /* 1.get depots from mockApi
+     * 2.distinct result
+     * 3.bind to depots control
+     * **/
   }
-
 }
 
 export class User {
