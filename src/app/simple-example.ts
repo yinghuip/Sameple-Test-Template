@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { MockApiService } from './mock-api.service';
+import { MockApiService } from './service/mock-api.service';
+
 
 /**
  * @title Simple autocomplete
