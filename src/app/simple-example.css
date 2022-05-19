@@ -1,0 +1,9 @@
+.example-form {
+  padding: 2rem;
+  text-align: center;
+  border: 0.1rem solid gray;
+}
+
+.example-full-width {
+  width: 100%;
+}

@@ -1,0 +1,42 @@
+<form class="example-form">
+<h1>Sample Form</h1>
+<mat-form-field appearance="fill">
+<mat-label>User</mat-label>
+<mat-select required name="UserName">
+  <mat-option *ngFor="let item of users" [value]="user.UserName">
+    {{user.UserName}}
+  </mat-option>
+</mat-select>
+</mat-form-field>
+<!--TODO: Display 'Required' error message-->
+<!--TODO: Display 'Timezone Not found' error message when option selected has Null timezone-->
+
+<p>
+
+<mat-form-field appearance="fill">
+<mat-label>Location</mat-label>
+<mat-select required name="location">
+  <mat-option *ngFor="let item of locations" [value]="item.Id">
+    {{item.Name}}
+  </mat-option>
+</mat-select>
+</mat-form-field>
+<!--TODO: Display 'Required' error message-->
+
+<p>
+<button mat-raised-button color="primary">Submit</button>
+<!--TODO: Disable button when form is invalid-->
+</form>
+<p>
+
+<!-- TODO: Display form value {UserName: string , Location: number}-->
+<mat-form-field class="example-full-width" appearance="fill">
+<mat-label>Display form value here!</mat-label>
+<textarea matInput name="formValueTextArea"></textarea>
+</mat-form-field>
+
+
+
+<!-- Copyright 2022 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
